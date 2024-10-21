@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://green-snake.vn:3307/order?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&spring.datasource.username=root
+    username: root
+    password: 123456789
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  kafka:
+    bootstrap-servers: localhost:9093
+    topic:
+      mail: kafka-mail
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    enabled: false
+
+server:
+  port: 8802

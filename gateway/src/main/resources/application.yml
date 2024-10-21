@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: config-service
+          uri: lb://config
+          predicates:
+            - Path=/config-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: notifi-service
+          uri: lb://notifi
+          predicates:
+            - Path=/notifi-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: order-service
+          uri: lb://order
+          predicates:
+            - Path=/order-service/**
+          filters:
+            - StripPrefix=1

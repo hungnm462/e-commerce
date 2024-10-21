@@ -1,0 +1,21 @@
+green-snake:
+  url:
+    white-list: /public/**,/swagger-ui/**,/v3/api-docs/**
+    char-split: ','
+  token:
+    prefix: Bearer
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: gs-sale
+    password: tzisumolvnrhbzzf
+  algorithm:
+    aes:
+      key: yF+21mY75gIwlvVE0T1x1A==
+  endpoints:
+    cors:
+      max-age: '36000'
+      allowed-headers: '*'
+      allowed-origins: '*'
+      allowed-credentials: 'true'
+      allowed-methods: POST, PUT, GET, OPTIONS, DELETE

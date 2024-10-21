@@ -1,0 +1,15 @@
+#spring:
+#  config:
+#    import: configserver:http://localhost:8801/config-service
+#  cloud:
+#    config:
+#      enabled: true
+#      uri: http://localhost:8801/config-service
+#      fail-fast: true
+#      retry:
+#        initial-interval: 1000
+#        max-attempts: 6
+#        max-interval: 2000
+#        multiplier: 1.1
+#      name: global
+#      profile: default

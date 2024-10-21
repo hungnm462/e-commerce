@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+#          search-locations: file:E:/DangHoc/My/green-snake/micro/config/src/main/resources/config
+        search-locations: classpath:/config/
